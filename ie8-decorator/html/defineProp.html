@@ -11,6 +11,7 @@ Object.defineProperty(cl, 'name', {
    get: function() {console.log('getter call');}
 })
 
+console.log('getOwnPropertyDescriptor = ' + Object.getOwnPropertyDescriptor(cl.prototype));
 cl.name = 'hoge';
 
 

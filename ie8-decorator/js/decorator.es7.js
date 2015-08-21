@@ -21,10 +21,14 @@ class Person {
 	constructor() {
 		this._name = '';
 	}
+	
+//	@getterdeco
+//	get name() { 
+//		return _name; 
+//	}
+	
 	@getterdeco
-	get name() { 
-		return _name; 
-	}
+	xxx;
 }
 
 export default Person;
