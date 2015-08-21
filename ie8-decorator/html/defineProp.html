@@ -2,15 +2,18 @@
 <head>
 <script type="text/javascript" src="../js/es5-shim.js"></script>
 <script type="text/javascript" src="../js/es5-sham.js"></script>
-<script type="text/javascript" src="../dist/decorator.js"></script>
 <script type="text/javascript">
-var person = new Person();
-console.log('person = ' + person);
-console.log(person);
-	
+var cl = {};
+
+Object.defineProperty(cl, 'name', {
+   configurable: true,
+   writable: true,
+   get: function() {console.log('getter call');}
+})
+
+cl.name = 'hoge';
+
+
 </script>
 </head>
-<body>
-this is test page
-</body>
 </html>
