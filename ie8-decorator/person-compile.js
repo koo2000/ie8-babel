@@ -7,9 +7,11 @@ babelify.configure({
 });
 
 browserify("./js/decorator.es7.js", {
-	debug : true
-}).transform(babelify.configure({
+	debug : true,
+	standalone : 'Person'
+})
+.transform(babelify.configure({
 	stage : 1
 })).bundle().on("error", function(err) {
 	console.log("Error : " + err.message);
-}).pipe(fs.createWriteStream("dist/decorator.js"));
+}).pipe(fs.createWriteStream("dist/deco.js"));

@@ -1,7 +1,7 @@
 
 function getterdeco(target, name, descriptor) {
 	console.log('getterdeco ' 
-			+ 'target = ' + target
+			+ 'target = ' + target + ' '
 			+ 'name = ' + name
 			);
 	return descriptor;
@@ -9,8 +9,8 @@ function getterdeco(target, name, descriptor) {
 
 
 function classdeco(target, name, descriptor) {
-	console.log('getterdeco ' 
-			+ 'target = ' + target
+	console.log('classdeco ' 
+			+ 'target = ' + target + ' '
 			+ 'name = ' + name
 			);
 	return descriptor;
@@ -26,3 +26,5 @@ class Person {
 		return _name; 
 	}
 }
+
+export default Person;
