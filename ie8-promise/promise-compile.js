@@ -6,14 +6,15 @@ babelify.configure({
 	stage : 1
 });
 
-browserify('./js/decorator.es7.js', {
+browserify('./js/promise-call.es7.js', {
 	debug : true,
 	standalone : 'Person',
 })
 .transform(babelify.configure({
 	stage : 1,
 	plugins : ['object-assign'],
-//	loose: ['es6.classes', 'es6.modules']
+	loose: ['es6.classes', 'es6.modules'],
+	optional: ["runtime"] 
 })).bundle().on('error', function(err) {
 	console.log('Error : ' + err.message);
-}).pipe(fs.createWriteStream('dist/decorator.js'));
+}).pipe(fs.createWriteStream('dist/promise-call.js'));

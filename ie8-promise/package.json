@@ -1,16 +1,16 @@
 {
-  "name": "ie8-decorator",
+  "name": "ie8-promise",
   "version": "0.1.0",
   "description": "",
-  "main": "bundle.js",
+  "main": "person-compile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-runtime": "^5.8.20",
     "browserify": "^11.0.1",
-    "babel-plugin-object-assign": "^1.2.1",
     "babelify": "^6.2.0"
   }
 }
