@@ -21,7 +21,8 @@ class Person {
 	constructor() {
 		this._name = '';
 	}
-	
+
+//  getter setter can't support in IE8!!
 //	@getterdeco
 //	get name() { 
 //		return _name; 
