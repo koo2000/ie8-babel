@@ -1,5 +1,6 @@
 
 function getterdeco(target, name, descriptor) {
+	descriptor.writable = true;
 	console.log('getterdeco ' 
 			+ 'target = ' + target + ' '
 			+ 'name = ' + name
@@ -22,12 +23,6 @@ class Person {
 		this._name = '';
 	}
 
-//  getter setter can't support in IE8!!
-//	@getterdeco
-//	get name() { 
-//		return _name; 
-//	}
-	
 	@getterdeco
 	xxx;
 }
